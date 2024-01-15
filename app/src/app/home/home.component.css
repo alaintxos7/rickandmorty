@@ -1,0 +1,54 @@
+.container{
+  background-image: url('../../assets/image/portal-morty-smith-rick.png');
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.container:before {
+  content:'';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #000000B2;
+}
+
+.panelcentro{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.panelcentro h1{
+  font-size: 36px;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+
+.panelcentro p{
+
+  font-size: 18px;
+  line-height: 30px;
+  color: #FFFFFF;
+  max-width: 872px;
+  text-align: center;
+}
+
+.buttoncont{
+  margin-top: 4vh;
+  background-color:#11555F;
+  border-radius:25px;
+  border: none;
+}
+
