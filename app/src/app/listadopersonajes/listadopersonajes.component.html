@@ -1,0 +1,18 @@
+<app-filtro/>
+<div>
+  @if(listadoPersonajes.results){
+    <div class="lista">
+    @for( personajeIndividual of listadoPersonajes.results; track $index ){
+
+      <app-tarjetapersonaje [personaje]="personajeIndividual"></app-tarjetapersonaje>
+    }
+  </div>
+  }@else {
+    <h1>No hay personjes para mostra</h1>
+  }
+</div>
+
+
+
+
+
