@@ -1,8 +1,84 @@
 .detalle{
-  position: block;
+  display: flex;
+background-color: white;
+flex-direction: column;
+align-items: center;
+width: 70%;
+height: 90vh;
   z-index: 99;
+  margin: auto;
 }
 .cabecera{
+  height: 30vh;
+  width: 100%;
+background-position: top;
+background-size: contain;
   background-image: url('../../assets/image/bg.png');
   background-repeat: no-repeat;
+  display: flex;
+  align-content: center;
+  justify-content: center;
 }
+.perfil{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-color: #ccc;
+  line-height: 100px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.info{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+.info .tarjetas{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.info .tarjetas .p-element{
+  width: 250px;
+  height: 100px;
+}
+.info .tarjetas .p-car-content .dato{
+  margin-block-start: 0.3em;
+  margin-block-end: 0em;
+}
+
+
+.episodios .tarjetas{
+  display: flex;
+  flex-wrap: wrap;
+  gap:20px;
+  overflow-x: auto;
+  width: 100%;
+  max-height: 600px;
+}
+.episodios .tarjeta{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  width: 250px;
+  height: 100px;
+  border-radius: 20px;
+  padding-left: 5px;
+  border: 1px solid grey;
+
+}
+

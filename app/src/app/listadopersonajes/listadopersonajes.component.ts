@@ -18,12 +18,13 @@ import { DetalleComponent } from '../detalle/detalle.component';
 export class ListadopersonajesComponent implements OnInit {
 listadoPersonajes:Personajes;
 listadoPersonajesAux:Personaje[] = [];
-personajeDetalle:Personaje;
+personajeDetalle:Personaje ;
 tiposGeneros:string[]= []
 favoritos: any[] = [];
 nombrePersonaje:string=""
 generoSeleccionado:string = "ALL";
 mostrarFavoritos:boolean = false;
+mostrarDetalle:boolean = false;
   constructor(private personajeService:PersonajesService){
 
   }
@@ -118,7 +119,7 @@ mostrarFavoritos:boolean = false;
 
   mostraDetalle(personaje: any) {
       console.log(personaje);
-
+      this.mostrarDetalle = true;
       this.personajeDetalle=personaje;
     }
 }
