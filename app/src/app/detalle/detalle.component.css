@@ -1,0 +1,8 @@
+.detalle{
+  position: block;
+  z-index: 99;
+}
+.cabecera{
+  background-image: url('../../assets/image/bg.png');
+  background-repeat: no-repeat;
+}

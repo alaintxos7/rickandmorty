@@ -1,16 +1,33 @@
-<app-filtro/>
-<div>
-  @if(listadoPersonajes.results){
-    <div class="lista">
-    @for( personajeIndividual of listadoPersonajes.results; track $index ){
+<app-filtro (nombreSeleccionado)="filtrarNombre($event)" [personajes]="listadoPersonajesAux" />
+<app-tabs [generoSelect]="generoSeleccionado" (generoSeleccionado)="filtrarGenero($event)" [generos]="tiposGeneros" />
 
-      <app-tarjetapersonaje [personaje]="personajeIndividual"></app-tarjetapersonaje>
+<section class="favoritos">
+  <span class="texto">Mostrar favoritos: <span (click)="mostrarFav($event,false)" style="border-radius: 50%; background-color: grey;  padding: 5px 5px;"><i class="pi pi-star-fill" [ngStyle]="{'color':mostrarFavoritos?'#F2994A':'white'}" ></i></span></span>
+</section>
+<div>
+  @if(listadoPersonajesAux.length >0){
+    <div class="lista">
+    @for( personajeIndividual of listadoPersonajesAux | buscarpersonaje:nombrePersonaje; track $index  ){
+     <div (click)="mostraDetalle(personajeIndividual)">
+      <app-tarjetapersonaje  (eliminadoDefavoritos)="mostrarFav($event, true)" [personaje]="personajeIndividual"></app-tarjetapersonaje>
+     </div>
     }
   </div>
   }@else {
-    <h1>No hay personjes para mostra</h1>
+    <div class="mensaje">
+<h1 class="titulo">Uh-oh!</h1>
+@if(mostrarFavoritos || generoSeleccionado != 'ALL'){
+<span class="texto">¡Pareces perdido en tu viaje!</span>
+<button (click)="eliminarFiltro()" pButton type="button"  label="Eliminar filtros" class="buttoncont" ></button>
+}@else {
+  <span class="texto">No hay datos para mostrar</span>
+}
+    </div>
   }
+ @if(personajeDetalle){ <app-detalle [personaje]="personajeDetalle"/>}
 </div>
+
+
 
 
 

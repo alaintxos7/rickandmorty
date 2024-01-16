@@ -1,13 +1,16 @@
-<p-card  >
-  <div class="tarjeta">
-      <p-image alt="Card" width="150"  height="200" src={{personaje.image}} />
+<p-card [style]="{ width: '400px', height:'200px' }"  >
+  <div class="tarjeta" >
+    <div class="relative">
+      <p-image alt="Card" width="180"  height="200" src={{personaje.image}} />
+      <span (click)="personaje.isFav== true? eliminarFav(personaje):anadirFav(personaje)" class="fav"><i class="pi pi-star-fill" [ngStyle]="{'color':personaje.isFav?'#F2994A':'white'}" ></i></span>
+    </div>
       <div class="info">
-       <span>{{personaje.status}}-{{personaje.species}} </span>
+       <span class="status"><i class="pi pi-circle-fill"  style="font-size:10px" [ngStyle]="{'color':isAlive(personaje.status)  }" ></i> {{personaje.status}}-{{personaje.species}} </span>
        <span class="name">{{personaje.name}} </span>
        <span class="titulo">Last known location: </span>
-       <span >{{personaje.location.name}} </span>
+       <span class="texto">{{personaje.location.name}} </span>
+       <span class="titulo">First seen in: </span>
+       <span  class="texto">{{personaje.origin.name}} </span>
       </div>
   </div>
-
-
 </p-card>

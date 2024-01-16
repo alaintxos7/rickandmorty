@@ -23,6 +23,7 @@ export interface Personajes {
   status:   Status;
   type:     string;
   url:      string;
+  isFav:    boolean;
  }
 
  export enum Gender {

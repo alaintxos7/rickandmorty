@@ -1,5 +1,33 @@
 .lista{
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
+  gap: 30px;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 150px;
+}
+.favoritos{
+  padding-left: 330px;
+   margin-top: 40px;
+}
+.favoritos .texto{
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+}
+.mensaje{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.buttoncont{
+  margin-top: 4vh;
+  background-color:#11555F;
+  border-radius:60px;
+  Padding:11px 20px 11px 20px;
+  border: none;
 }
