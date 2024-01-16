@@ -1,0 +1,17 @@
+<section class="tabcontainer">
+  <button (click)="seleccionarGenero('ALL')"  [ngClass]="generoSelect=='ALL'?'active':''" >ALL</button>
+  @for(genero of generos; track $index){
+  <button  [ngClass]="generoSelect==genero?'active':''"  (click)="seleccionarGenero(genero)"  >{{genero}}
+  </button>
+  }
+</section>
+
+
+
+<!--<p-tabView>
+  <p-tabPanel header="ALL"/>
+  @for(genero of generos; track $index){
+    <p-tabPanel header={{genero}}/>
+  }
+
+</p-tabView>-->

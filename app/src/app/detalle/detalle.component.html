@@ -1,0 +1,60 @@
+<div class="detalle" >
+  <div class="cabecera">
+    <div class="perfil" >
+      <img class="avatar" src="{{personaje.image}}"/>
+      <span>{{personaje.status}}</span>
+      <span>{{personaje.name}}</span>
+      <span>{{personaje.species}}</span>
+
+    </div>
+
+  </div>
+  <div class="info">
+<h2 class="titulo">Información</h2>
+<div class="tarjetas">
+  <p-card  [style]="{ width: '200px', height:'80px', padding:'10px', border:'1px solid grey' }">
+    <ng-template pTemplate="header">
+      <i class="pi pi-info-circle"></i>
+      <span>Gender</span>
+  </ng-template>
+  <ng-template pTemplate="subheader">
+    {{personaje.gender}}
+  </ng-template>
+</p-card>
+<p-card  [style]="{ width: '200px', height:'80px', padding:'10px' , border:'1px solid grey'}">
+  <ng-template pTemplate="header">
+    <i class="pi pi-info-circle"></i>
+    <span>Origin</span>
+</ng-template>
+<ng-template pTemplate="subheader">
+  {{personaje.origin.name}}
+</ng-template>
+</p-card>
+<p-card  [style]="{ width: '200px', height:'80px', padding:'10px' , border:'1px solid grey'}">
+  <ng-template pTemplate="header">
+    <i class="pi pi-info-circle"></i>
+    <span>Type</span>
+</ng-template>
+<ng-template pTemplate="subheader">
+  {{personaje.type}}
+</ng-template>
+
+</p-card>
+</div>
+  </div>
+
+  <p-divider type="solid" [style]="{width: '700px' }"></p-divider>
+
+  <div class="episodios">
+    <h2 class="titulo">Episodios</h2>
+    <div class="tarjetas">
+@for(episodio of episodios ; track $index){
+  <div class="tarjeta">
+    <span>{{episodio.name}}</span>
+    <span>{{episodio.episode}}</span>
+    <span>{{episodio.air_date}}</span>
+  </div>
+}
+    </div>
+  </div>
+</div>

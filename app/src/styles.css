@@ -1,4 +1,37 @@
-/* You can add global styles to this file, and also import other style files */
+@import "primeicons/primeicons.css";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+
+*{font-family:'Montserrat', sans-serif ;}
+
 body{
   margin: 0 !important;
+}
+.p-card .p-card-body {
+  padding: 0rem;
+}
+.p-card .p-card-content {
+  padding: 0rem;
+}
+.p-tabview .p-tabview-nav {
+  background: #F2F2F2;
+  border: 1px solid#34C759;
+  border-width: 0 0 2px 0;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+.p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link {
+  background: transparent;
+}
+
+.p-tabview .p-tabview-nav li{
+  width: 25%;
+  background-color: transparent;
+
+}
+
+.imagen .p-imagen{
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
 }
