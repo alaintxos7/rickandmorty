@@ -1,3 +1,5 @@
+<section [ngClass]="mostrarDetalle?'overlay':''">
+
 <app-filtro (nombreSeleccionado)="filtrarNombre($event)" [personajes]="listadoPersonajesAux" />
 <app-tabs [generoSelect]="generoSeleccionado" (generoSeleccionado)="filtrarGenero($event)" [generos]="tiposGeneros" />
 
@@ -24,9 +26,10 @@
 }
     </div>
   }
- @if(mostrarDetalle){<app-detalle [personaje]="personajeDetalle"/>}
+ @if(mostrarDetalle){
+  <div class="detalle"><app-detalle (cerrar)="cerrarDetalle($event)" [personaje]="personajeDetalle"/></div>}
 </div>
-
+</section>
 
 
 

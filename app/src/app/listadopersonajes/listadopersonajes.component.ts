@@ -8,6 +8,7 @@ import { TabsComponent } from '../tabs/tabs.component';
 import { BuscarpersonajePipe } from '../pipe/buscarpersonaje.pipe';
 import { ButtonModule } from 'primeng/button';
 import { DetalleComponent } from '../detalle/detalle.component';
+
 @Component({
   selector: 'app-listadopersonajes',
   standalone: true,
@@ -118,8 +119,11 @@ mostrarDetalle:boolean = false;
     }
 
   mostraDetalle(personaje: any) {
-      console.log(personaje);
       this.mostrarDetalle = true;
       this.personajeDetalle=personaje;
+    }
+
+    cerrarDetalle(value: boolean) {
+    this.mostrarDetalle = !value;
     }
 }
