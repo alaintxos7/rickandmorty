@@ -17,8 +17,6 @@ export class TabsComponent {
 
 seleccionarGenero(value: string) {
   this.generoSelect = value;
-console.log(value);
-
   this.generoSeleccionado.emit(value);
 }
 }

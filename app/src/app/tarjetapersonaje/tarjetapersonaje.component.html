@@ -2,7 +2,7 @@
   <div class="tarjeta" >
     <div class="relative">
       <p-image alt="Card" width="180"  height="200" src={{personaje.image}} />
-      <span (click)="personaje.isFav== true? eliminarFav(personaje):anadirFav(personaje)" class="fav"><i class="pi pi-star-fill" [ngStyle]="{'color':personaje.isFav?'#F2994A':'white'}" ></i></span>
+      <span (click)="personaje.isFav== true? eliminarFav(personaje):anadirFav(personaje)" class="fav"><i class="pi pi-star-fill" [ngStyle]="{'color':personaje.isFav?'#F2994A':'#828282'}" ></i></span>
     </div>
       <div class="info">
        <span class="status"><i class="pi pi-circle-fill"  style="font-size:10px" [ngStyle]="{'color':isAlive(personaje.status)  }" ></i> {{personaje.status}}-{{personaje.species}} </span>

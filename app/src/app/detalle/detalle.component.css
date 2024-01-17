@@ -3,39 +3,103 @@
 background-color: white;
 flex-direction: column;
 align-items: center;
-width: 70%;
-height: 90vh;
+width: 45%;
+
   z-index: 99;
   margin: auto;
+  border-radius: 16px;
+  overflow-y: hidden;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.close{
+  position: absolute;
+top: 6px;
+right: 6px;
+width: 24px;
+height: 24px;
+border-radius: 50%;
+background-color: white;
+z-index: 2;
+padding: 4px 4px;
 }
 .cabecera{
-  height: 30vh;
+  height: 40vh;
   width: 100%;
-background-position: top;
-background-size: contain;
-  background-image: url('../../assets/image/bg.png');
-  background-repeat: no-repeat;
+position: relative;
   display: flex;
+  flex-direction: column;
   align-content: center;
   justify-content: center;
 }
-.perfil{
+.imagen{
+
+height: 20vh;
+width: 100%;
+background-position: top;
+background-size: cover;
+  background-image: url('../../assets/image/bg.png');
+  background-repeat: no-repeat;
+
+}
+.imagen::after {
+  content:'';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 20vh;
+  width: 100%;
+  margin:0 auto;
+  background-color: #38383861;
+}
+.vacio{
+  height: 20vh;
+  width: 100%;
+  background-color: #e2e2e2f7;
+}
+.infoavatar{
+  position: absolute;
+
+  top: calc(50% - 75px);
+  left: calc(50% - 75px);
+  margin: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+align-items: center;
 }
 
 
 .avatar {
-  width: 100px;
-  height: 100px;
-  margin: 0 auto;
+  position: relative;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   background-color: #ccc;
   line-height: 100px;
   text-align: center;
   margin-bottom: 10px;
+  border: 2px solid white;
+}
+.fav{
+  position: absolute;
+bottom: 6px;
+left: 60px;
+border-radius: 50%;
+background-color: white;
+padding: 4px 5px;
+}
+.infoavatar .titulo{
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+}
+.infoavatar .texto{
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
 }
 
 .info{
@@ -44,12 +108,14 @@ background-size: contain;
   flex-direction: column;
   justify-content: start;
   align-items: start;
+  padding: 0 15px;
 }
 .info .tarjetas{
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
 }
 .info .tarjetas .p-element{
   width: 250px;
@@ -60,25 +126,46 @@ background-size: contain;
   margin-block-end: 0em;
 }
 
+.episodios{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  padding: 0 15px;
+
+}
 
 .episodios .tarjetas{
   display: flex;
-  flex-wrap: wrap;
+flex-wrap: wrap;
   gap:20px;
-  overflow-x: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
   width: 100%;
-  max-height: 600px;
+  max-height: 300px;
 }
 .episodios .tarjeta{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: start;
-  width: 250px;
-  height: 100px;
-  border-radius: 20px;
-  padding-left: 5px;
+  width: 173px;
+  height: 72px;
+  border-radius: 8px;
+  padding-left: 9px;
   border: 1px solid grey;
 
+}
+
+.episodios .titulo{
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 22px;
+}
+.episodios .texto{
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
 }
 

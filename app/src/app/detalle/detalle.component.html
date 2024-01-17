@@ -1,12 +1,22 @@
-<div class="detalle" >
-  <div class="cabecera">
-    <div class="perfil" >
-      <img class="avatar" src="{{personaje.image}}"/>
-      <span>{{personaje.status}}</span>
-      <span>{{personaje.name}}</span>
-      <span>{{personaje.species}}</span>
 
-    </div>
+
+<div class="detalle" >
+  <span (click)="cerrarDetalle(true)" class="close"> <i class="pi pi-times-circle"></i></span>
+  <div class="cabecera">
+    <div class="imagen"></div>
+    <div class="vacio" ></div>
+<div class="infoavatar">
+  <div style="position: relative;">
+    <img class="avatar" src="{{personaje.image}}"/>
+    <span  class="fav"><i class="pi pi-star-fill" [ngStyle]="{'color':personaje.isFav?'#F2994A':'#828282'}" ></i></span>
+  </div>
+
+
+  <span class="texto">{{personaje.status | uppercase}}</span>
+  <span class="titulo">{{personaje.name }}</span>
+  <span class="texto">{{personaje.species | uppercase}}</span>
+</div>
+
 
   </div>
   <div class="info">
@@ -17,7 +27,7 @@
       <i class="pi pi-info-circle"></i>
       <span>Gender</span>
   </ng-template>
-  <ng-template pTemplate="subheader">
+  <ng-template pTemplate="subheader" >
     {{personaje.gender}}
   </ng-template>
 </p-card>
@@ -26,7 +36,7 @@
     <i class="pi pi-info-circle"></i>
     <span>Origin</span>
 </ng-template>
-<ng-template pTemplate="subheader">
+<ng-template pTemplate="subheader" >
   {{personaje.origin.name}}
 </ng-template>
 </p-card>
@@ -50,11 +60,14 @@
     <div class="tarjetas">
 @for(episodio of episodios ; track $index){
   <div class="tarjeta">
-    <span>{{episodio.name}}</span>
-    <span>{{episodio.episode}}</span>
-    <span>{{episodio.air_date}}</span>
+    <span class="texto">{{episodio.name}}</span>
+    <span class="titulo">{{episodio.episode}}</span>
+    <span class="texto">{{episodio.air_date}}</span>
   </div>
 }
     </div>
   </div>
+
+  <p-divider type="solid" [style]="{width: '700px' }"></p-divider>
 </div>
+
